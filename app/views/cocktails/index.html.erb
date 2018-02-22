@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-md-4">
+      <h1>Cocktails</h1>
+    </div>
+  </div>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-3 col-md-4">
+        <div class="card">
+          <div class="content">
+            <%= link_to cocktail.name, cocktail_path(cocktail), :class=>'h4' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
