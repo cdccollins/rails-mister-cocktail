@@ -1,9 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-3 col-md-4">
-      <h1 class="row-title">Cocktails</h1>
-    </div>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1490324120634-0fa86c62d6c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2ca1d7b355475d8504bdb44b4b8c718&auto=format&fit=crop&w=2559&q=80');">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <%= link_to "Add a new cocktail", new_cocktail_path, :class=>"btn btn-danger"  %>
   </div>
+</div>
+<div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-3 col-md-4">
@@ -21,3 +23,16 @@
     <% end %>
   </div>
 </div>
+<script>
+  function initUpdateNavbarOnScroll() {
+  const navbar = document.querySelector('.cocktail-navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= window.innerHeight) {
+      navbar.classList.add('cocktail-navbar-white');
+    } else {
+      navbar.classList.remove('cocktail-navbar-white');
+    }
+  });
+}
+initUpdateNavbarOnScroll();
+</script>
