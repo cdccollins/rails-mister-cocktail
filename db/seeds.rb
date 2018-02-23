@@ -1,3 +1,5 @@
+Dose.destroy_all
+Cocktail.destroy_all
 Ingredient.destroy_all
 
 require 'open-uri'
