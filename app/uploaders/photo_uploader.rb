@@ -2,5 +2,9 @@
 class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
-  # Remove everything else
+  process eager: true
+
+  version :header do
+    cloudinary_transformation height: 300, crop: :fill
+  end
 end

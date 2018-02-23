@@ -28,6 +28,9 @@
 
 .row {
   margin: 20px 10px;
+  .row-title {
+    color: #535657;
+  }
 }
 
 .container {
@@ -36,4 +39,9 @@
 
 .form-title {
   margin-top: 0px;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
 }
